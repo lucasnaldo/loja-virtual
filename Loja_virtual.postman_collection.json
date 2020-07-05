@@ -1,0 +1,678 @@
+{
+	"info": {
+		"_postman_id": "e19f77c7-01f5-4763-b496-45932ef230c8",
+		"name": "Loja_virtual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cliente",
+			"item": [
+				{
+					"name": "criar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"nome\": \"Lucas Naldo Falotico\", \r\n            \"email\": \"lucas_naldo@hotmail.com\",\r\n            \"password\": \"senhaLucas\",\r\n            \"endereco\": \"Rua Conde de Itu 120, apto 1901\", \r\n            \"data_nascimento\": \"04/03/1991\" \r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/clientes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTM5ODYxNTUsIm5iZiI6MTU5Mzk4NjE1NSwianRpIjoiZDRiNWU3OGYtNGQ5NC00NmViLWE3ZWItMWFiYmI5ZTE4MGJjIiwiZXhwIjoxNTkzOTg3MDU1LCJpZGVudGl0eSI6Imx1Y2FzX25hbGRvQGhvdG1haWwuY29tIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.xjfXbVdQrHLUheOfWqAJX-Cak7ntYJbX7OvwsgvQxp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Luiza Julio Campos\", \r\n    \"email\": \"luizalokadasilva@hotmail.com\", \r\n    \"endereco\": \"Rua Conde de Itu 120, apto 1901\", \r\n    \"data_nascimento\": \"30/08/1990\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/clientes/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/clientes/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"clientes",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTM5ODYxNTUsIm5iZiI6MTU5Mzk4NjE1NSwianRpIjoiZDRiNWU3OGYtNGQ5NC00NmViLWE3ZWItMWFiYmI5ZTE4MGJjIiwiZXhwIjoxNTkzOTg3MDU1LCJpZGVudGl0eSI6Imx1Y2FzX25hbGRvQGhvdG1haWwuY29tIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.xjfXbVdQrHLUheOfWqAJX-Cak7ntYJbX7OvwsgvQxp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/clientes/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "produto",
+			"item": [
+				{
+					"name": "criar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTM5ODYxNTUsIm5iZiI6MTU5Mzk4NjE1NSwianRpIjoiZDRiNWU3OGYtNGQ5NC00NmViLWE3ZWItMWFiYmI5ZTE4MGJjIiwiZXhwIjoxNTkzOTg3MDU1LCJpZGVudGl0eSI6Imx1Y2FzX25hbGRvQGhvdG1haWwuY29tIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.xjfXbVdQrHLUheOfWqAJX-Cak7ntYJbX7OvwsgvQxp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"nome\": \"Camisa\",\r\n            \"preco\": 50,\r\n            \"descricao\": \"Camisetas Brancas\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/produtos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"produtos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTM5ODYxNTUsIm5iZiI6MTU5Mzk4NjE1NSwianRpIjoiZDRiNWU3OGYtNGQ5NC00NmViLWE3ZWItMWFiYmI5ZTE4MGJjIiwiZXhwIjoxNTkzOTg3MDU1LCJpZGVudGl0eSI6Imx1Y2FzX25hbGRvQGhvdG1haWwuY29tIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.xjfXbVdQrHLUheOfWqAJX-Cak7ntYJbX7OvwsgvQxp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/produtos/atualizar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"produtos",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/produtos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"produtos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/produtos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"produtos",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTM5ODYxNTUsIm5iZiI6MTU5Mzk4NjE1NSwianRpIjoiZDRiNWU3OGYtNGQ5NC00NmViLWE3ZWItMWFiYmI5ZTE4MGJjIiwiZXhwIjoxNTkzOTg3MDU1LCJpZGVudGl0eSI6Imx1Y2FzX25hbGRvQGhvdG1haWwuY29tIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.xjfXbVdQrHLUheOfWqAJX-Cak7ntYJbX7OvwsgvQxp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/produtos/excluir",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"produtos",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "pedido",
+			"item": [
+				{
+					"name": "criar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTM5ODYxNTUsIm5iZiI6MTU5Mzk4NjE1NSwianRpIjoiZDRiNWU3OGYtNGQ5NC00NmViLWE3ZWItMWFiYmI5ZTE4MGJjIiwiZXhwIjoxNTkzOTg3MDU1LCJpZGVudGl0eSI6Imx1Y2FzX25hbGRvQGhvdG1haWwuY29tIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.xjfXbVdQrHLUheOfWqAJX-Cak7ntYJbX7OvwsgvQxp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_pedido\": 2,\r\n    \"id_cliente\": 1,\r\n    \"itens_pedido\": [\r\n                {\r\n                    \"id_produto\": 1,\r\n                    \"quantidade\": 1\r\n                },\r\n                {\r\n                    \"id_produto\": 2,\r\n                    \"quantidade\": 1\r\n                },\r\n                {\r\n                    \"id_produto\": 3,\r\n                    \"quantidade\": 1\r\n                }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/pedidos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"pedidos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTM5ODYxNTUsIm5iZiI6MTU5Mzk4NjE1NSwianRpIjoiZDRiNWU3OGYtNGQ5NC00NmViLWE3ZWItMWFiYmI5ZTE4MGJjIiwiZXhwIjoxNTkzOTg3MDU1LCJpZGVudGl0eSI6Imx1Y2FzX25hbGRvQGhvdG1haWwuY29tIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.xjfXbVdQrHLUheOfWqAJX-Cak7ntYJbX7OvwsgvQxp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/pedidos/atualizar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"pedidos",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/pedidos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"pedidos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/pedidos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"pedidos",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar_item",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/pedidos/itens_pedidos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"pedidos",
+								"itens_pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTM5ODYxNTUsIm5iZiI6MTU5Mzk4NjE1NSwianRpIjoiZDRiNWU3OGYtNGQ5NC00NmViLWE3ZWItMWFiYmI5ZTE4MGJjIiwiZXhwIjoxNTkzOTg3MDU1LCJpZGVudGl0eSI6Imx1Y2FzX25hbGRvQGhvdG1haWwuY29tIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.xjfXbVdQrHLUheOfWqAJX-Cak7ntYJbX7OvwsgvQxp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/pedidos/excluir",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"pedidos",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"lucas_naldo@hotmail.com\",\r\n    \"password\": \"senhaLucas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
