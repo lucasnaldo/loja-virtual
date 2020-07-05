@@ -39,3 +39,13 @@ pytest
 ```terminal
 coverage run -m pytest
 ```
+
+## Run project
+
+`python loja/app.py`
+
+## Run project with docker
+
+`docker build -t lojavirtual .`
+`docker images`
+`docker run <image_id>`
