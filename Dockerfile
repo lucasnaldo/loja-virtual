@@ -23,4 +23,4 @@ COPY . .
 
 RUN python setup.py install
 
-CMD ["python", "app.py"]
+CMD ["python", "loja/app.py"]

@@ -102,7 +102,7 @@ def get_itens_pedidos():
 
 # get item_pedido detail endpoint
 @blueprint.route("/itens_pedidos/<id>", methods=["GET"])
-def get_itens_pedidos():
+def get_item_pedido():
     result = ItensPedido.query.get(id)
 
     return item_pedido_schema.jsonify(result)
