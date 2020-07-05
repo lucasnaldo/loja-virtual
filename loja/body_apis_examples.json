@@ -1,0 +1,88 @@
+[
+    // CLIENTE
+    {
+        "Cliente": [
+            {
+                "nome": "Lucas Naldo Falotico", 
+                "email": "lucas_naldo@hotmail.com",
+                "password": "senhaLucas",
+                "endereco": "Rua Conde de Itu 120, apto 1901", 
+                "data_nascimento": "04/03/1991" 
+            },
+            {
+                "nome": "Luiza Julio Campos", 
+                "email": "luiza_campos@hotmail.com",
+                "password": "senhaLuiza",
+                "endereco": "Rua Conde de Itu 120, apto 1901", 
+                "data_nascimento": "31/08/1990" 
+            },
+            {
+                "nome": "Paulo Silva Souza", 
+                "email": "paulo_souza@hotmail.com",
+                "password": "senhaPaulo",
+                "endereco": "Avenida Paulista 1234", 
+                "data_nascimento": "20/03/1986" 
+            }
+        ]    
+    },
+    // PRODUTO
+    {
+        "Produto":[
+            {
+                "nome": "Camisa",
+                "preco": 50,
+                "descricao": "Camisetas Brancas"
+            },
+            {
+                "nome": "Calça",
+                "preco": 40,
+                "descricao": "Calças Jeans"
+            },
+            {
+                "nome": "Meia",
+                "preco": 15,
+                "descricao": "Meias Personagens Disney"
+            }
+        ]
+    },
+    // PEDIDO
+    {
+        "Pedido": [
+            {
+                "id_pedido": 1,
+                "id_cliente": 1,
+                "itens_pedido": [
+                    {
+                        "id_produto": 1,
+                        "quantidade": 5
+                    },
+                    {
+                        "id_produto": 2,
+                        "quantidade": 3
+                    },
+                    {
+                        "id_produto": 3,
+                        "quantidade": 1
+                    }
+                ],
+                "valor_total":"soma total quantidade x preco produto"
+            },
+            {
+                "id_pedido": 2,
+                "id_cliente": 2,
+                "itens_pedido": [
+                    {
+                        "id_produto": 1,
+                        "quantidade": 1
+                    },
+                    {
+                        "id_produto": 2,
+                        "quantidade": 1
+                    }
+                ],
+                "valor_total":"soma total quantidade x preco produto"
+            }
+        ]
+    }
+        
+]
